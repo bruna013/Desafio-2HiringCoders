@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Móveis Planejados</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="./assest/carpintaria.png"/>
+</head>
+<body>
+    <script src="home.js" type="text/javascript">
+    </script>
+    <header id="header" class="header">
+        <div class="containerLogo">
+            <img class="logo" src="./assest/carpintaria.png" alt="logo"/>
+        </div>
+        <a class="navbar" href="#header" onclick={exibirHome()}>Home</a>
+        <a class="navbar" href="#cliente" onclick={exibirCadCliente()}>Cadastro de Clientes  </a>
+        <a class="navbar" href="#produtos" onclick={exibirCadProduto()}>Cadastro de Produtos</a>
+    </header>  
+    <main class="main" id="main">
+       <form id="form" class="form" action="#">
+            <section class="cliente" id="cliente">
+                <fieldset class="fieldsetCliente">
+                    <legend class="legend" id="legendCliente">Cadastro de Cliente</legend>
+                    <p class="labelCliente">Nome </p>
+                    <input type="text" id="nomeCliente" class="input" placeholder="Nome"/>
+                    <p class="labelCliente">E-mail </p>
+                    <input type="text" id="emailCliente" class="input" placeholder="E-mail"/>
+                    <p class="labelCliente">Endereço </p>
+                    <input type="text" id="enderecoCliente" class="input" placeholder="Endereço"/>
+                    <p class="labelCliente">Data de Nascimento </p>
+                    <input type="date" id="dataNascimentoCliente" class="input"/>
+                    <p class="labelCliente">Telefone </p>
+                    <input type="text" id="telefoneCliente" class="input" placeholder="(xx) 90000-0000"/>
+                    <p class="labelCliente">CPF</p>
+                    <input type="text" id="cpfCliente" class="input" placeholder="000.000.000-00"/>
+                    <button class="button" id="cadastrarCliente" onclick={cadastroCliente()}>Cadastrar</button>
+                </fieldset>
+            </section>
+        </form>    
+        <p id="home" class="home">Bem Vindo!</p>
+        <form id="form" class="form" action="#">
+            <section class="produtos" id="produtos">
+                <fieldset class="fieldsetProduto">
+                    <legend class="legend" id="legendProduto">Cadastro de Produtos</legend>
+                    <p class="labelCadastro">Nome </p>
+                    <input type="text" id="nomeProduto" class="input" placeholder="Nome"/>
+                    <p class="labelCadastro">Código </p>
+                    <input type="text" id="codigoProduto" class="input" placeholder="Código"/>
+                    <p class="labelCadastro">Descrição </p>
+                    <input type="text" id="descricaoProduto" class="input" placeholder="Descrição"/>
+                    <p class="labelCadastro">Fornecedor </p>
+                    <input type="text" id="fornecedorProduto" class="input" placeholder="Fornecedor"/>
+                    <p class="labelCadastro">Preço </p>
+                    <input type="text" id="precoProduto" class="input" placeholder="Preço"/>
+                    <p class="labelCadastro">Quantidade em estoque</p>
+                    <input type="number" id="quantidadeProduto" class="input" placeholder="Quantidade"/>
+                    <p class="labelCadastro">Formas de Pagamento </p>
+                    <input type="checkbox" id="boleto" class="inputCadastro"/>
+                    <label class="labelCadastro">Boleto</label>
+                    <input type="checkbox" id="cartaoCredito" class="inputCadastro"/>
+                    <label class="labelCadastro">Cartão de Crédito</label>
+                    <input type="checkbox" id="pix" class="inputCadastro"/>
+                    <label class="labelCadastro">Pix</label>
+                    <p class="labelCadastro">Ícone do Produto</p>
+                    <input type="file" id="file" class="input"/>
+                    <button class="button" id="cadastrarProduto" onclick={cadastroProduto()}>Cadastrar</button>
+                </fieldset>
+            </section>
+        </form>
+    </main>  
+    <footer class="footer">
+        <a href="https://github.com/bruna013/Desafio-2HiringCoders" class="gitHub">
+            Bruna Ferreira ● GitHub
+        </a>
+    </footer>
+</body>
+</html>
